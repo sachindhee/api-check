@@ -27,5 +27,13 @@ public class UserController {
         return userRepository.findAll();
     }
 
+    @GetMapping ("/search")
+    public List<User> searchUser(@RequestParam String name, @RequestParam int age){
+
+        return userRepository.findByNameContainingIgnoreCaseAndAge(name,age);
+    }
+
+
+
 
 }
