@@ -9,5 +9,7 @@ public interface userRepository extends MongoRepository<User,String> {
 
     List<User> findByNameContainingIgnoreCaseAndAge(String name ,int age);
     List<User> findByName(String name);
+    List<User> findByAge(int age);
+
 
 }
