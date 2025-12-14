@@ -37,6 +37,11 @@ public class UserController {
 
         return userRepository.findByName(name);
     }
+    @GetMapping ("/age")
+    public List<User> nameUser(@RequestParam int age){
+
+        return userRepository.findByAge(age);
+    }
 
 
 
